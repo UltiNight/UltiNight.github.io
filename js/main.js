@@ -120,7 +120,7 @@
       body.append(
         el("a", {
           class: "card-play",
-          href: `${project.play.href}?lang=${lang}`,
+          href: `${location.protocol === "file:" ? "https://ultinight.github.io/" : ""}${project.play.href}?lang=${lang}`,
           target: "_blank",
           rel: "noopener",
           text: `▶ ${t("label.play")}`,

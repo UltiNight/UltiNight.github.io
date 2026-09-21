@@ -63,6 +63,8 @@
           <h1 id="loading-title">불러오는 중</h1>
           <div class="bar"><i id="bar"></i></div>
           <p id="pct">0%</p>
+          <p id="hint" hidden></p>
+          <button class="btn" id="retry" hidden>다시 시도</button>
         </div>
       </div>
 
@@ -84,7 +86,11 @@
           keys: [["마우스 왼쪽", "누른 채 드래그해 조준하고 놓으면 점프"], ["Space", "슈퍼 점프"], ["Shift", "브레이크"], ["Esc", "일시정지"]],
           note: "컴퓨터 수업(컴퓨터 그래픽스)에서 만든 Unity 6 게임을 브라우저용으로 빌드했습니다. PC 브라우저를 권장합니다. 한 번 내려받은 뒤에는 브라우저에 저장되어 더 빨리 열립니다. 게임 속 이미지와 음악은 AI로 제작했고, 글꼴은 메이플스토리 서체(NEXON)입니다.",
           mTitle: "PC 브라우저에서 플레이해 주세요", mText: "마우스 조작과 키보드가 필요한 게임이라 스마트폰에서는 지원하지 않습니다.",
-          error: "게임을 불러오지 못했습니다. 새로고침한 뒤 다시 시도해 주세요."
+          error: "게임을 불러오지 못했습니다. 새로고침한 뒤 다시 시도해 주세요.",
+          hint: "네트워크가 불안정하거나 브라우저 확장 프로그램이 파일을 막으면 실패할 수 있습니다. 새로고침하거나 Chrome, Edge에서 다시 열어 보세요.",
+          retry: "다시 시도",
+          fileText: "이 게임은 웹 주소에서만 실행됩니다. 파일로 직접 열면 브라우저가 게임 파일을 막습니다. 아래 버튼으로 온라인 버전을 열어 주세요.",
+          fileBtn: "온라인에서 플레이"
         },
         en: {
           back: "← Portfolio", intro: "A 2D climbing game set on a campus. The first visit downloads about 60 MB.",
@@ -92,7 +98,11 @@
           keys: [["Left mouse", "hold and drag to aim, release to jump"], ["Space", "super jump"], ["Shift", "brake"], ["Esc", "pause"]],
           note: "A Unity 6 game from a computer graphics class, built for the browser. A desktop browser is recommended. After the first download it is cached, so it opens faster. The images and music in the game are AI-generated, and the font is the MapleStory typeface (NEXON).",
           mTitle: "Please play on a desktop browser", mText: "The game needs a mouse and keyboard, so phones are not supported.",
-          error: "The game could not be loaded. Please refresh and try again."
+          error: "The game could not be loaded. Please refresh and try again.",
+          hint: "An unstable network or a browser extension that blocks the files can cause this. Refresh, or open the page in Chrome or Edge.",
+          retry: "Try again",
+          fileText: "This game only runs from a web address. Opened as a local file, the browser blocks the game files. Use the button below to open the online version.",
+          fileBtn: "Play online"
         }
       };
 
@@ -106,9 +116,25 @@
       $("back").textContent = t.back; $("intro").textContent = t.intro; $("play").textContent = t.play;
       $("loading-title").textContent = t.loading; $("fs").textContent = t.fs; $("note").textContent = t.note;
       $("m-title").textContent = t.mTitle; $("m-text").textContent = t.mText;
+      $("retry").textContent = t.retry;
       $("keys").innerHTML = t.keys.map(function (k) { return "<span><b>" + k[0] + "</b>" + k[1] + "</span>"; }).join("");
 
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) { document.body.classList.add("is-mobile"); return; }
+
+      // Unity WebGL cannot load its files when this page is opened straight from disk (file://).
+      if (location.protocol === "file:") {
+        $("intro").textContent = t.fileText;
+        $("play").textContent = t.fileBtn;
+        $("play").addEventListener("click", function () {
+          location.href = "https://ultinight.github.io/play/techmoup/index.html?lang=" + lang;
+        });
+        return;
+      }
+
+      $("retry").addEventListener("click", function () {
+        try { indexedDB.deleteDatabase("UnityCache"); } catch (e) {}
+        location.reload();
+      });
 
       $("play").addEventListener("click", function () {
         $("start").hidden = true;
@@ -133,7 +159,11 @@
           $("fs").addEventListener("click", function () { instance.SetFullscreen(1); });
         }).catch(function (err) {
           $("loading-title").textContent = t.error;
-          $("pct").textContent = String(err).slice(0, 160);
+          document.querySelector(".bar").hidden = true;
+          $("pct").textContent = String(err && err.message ? err.message : err).slice(0, 200);
+          $("hint").textContent = t.hint;
+          $("hint").hidden = false;
+          $("retry").hidden = false;
         });
       });
     })();
