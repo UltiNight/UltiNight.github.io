@@ -21,7 +21,7 @@ const I18N = {
     "about.title": "소개",
     "about.stack": "사용 기술",
     "about.p1":
-      "저는 김욱동(Ultinight)입니다. 완성된 결과물보다, 그것이 어떻게 만들어졌는지가 늘 더 궁금했습니다. 게임을 할 때도 이 기능이 어떤 원리로 돌아가는지, 안쪽은 어떻게 짜여 있는지부터 떠올렸습니다.",
+      "저는 김욱동입니다. 완성된 결과물보다, 그것이 어떻게 만들어졌는지가 늘 더 궁금했습니다. 게임을 할 때도 이 기능이 어떤 원리로 돌아가는지, 안쪽은 어떻게 짜여 있는지부터 떠올렸습니다.",
     "about.p2":
       "그 호기심이 Unity와 C#으로 이어졌습니다. 게임을 열어 구조를 파악하고, 그 위에 기능과 도구를 직접 만들어 봤습니다. 그러다 보니 그림을 그리는 일과 프로그램을 뜯어보는 일이 크게 다르지 않다고 느꼈습니다. 둘 다 기술이 어떻게 동작하는지 이해하고, 그것을 원하는 모습으로 만드는 일이니까요.",
 
@@ -107,7 +107,7 @@ const I18N = {
     "about.title": "About",
     "about.stack": "Tech stack",
     "about.p1":
-      "I'm Wookdong Kim (Ultinight). I've always been more curious about how something is made than about the finished result. Even while playing a game, I'd think about how a feature works and how it's put together underneath.",
+      "I'm Wookdong Kim. I've always been more curious about how something is made than about the finished result. Even while playing a game, I'd think about how a feature works and how it's put together underneath.",
     "about.p2":
       "That curiosity led me to Unity and C#. I opened games up, worked out their structure, then built features and tools on top. Along the way, drawing and taking programs apart started to feel like the same job: understand how the technology works, then shape it into what you want.",
 
