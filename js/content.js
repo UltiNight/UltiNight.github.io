@@ -235,7 +235,11 @@ const PROJECTS = [
       ],
     },
     stack: ["Electron", "Three.js", "FBX", "Windows"],
-    status: { ko: "v0.4 개발 중", en: "v0.4 in development" },
+    status: { ko: "v0.4.1 개발 중", en: "v0.4.1 in development" },
+    note: {
+      ko: "다음 단계: 직접 그린 스킨으로 로컬 이미지 생성 모델(LoRA)을 학습해, 마스크 영역 안에서만 결과를 넣는 생성 기능을 검토하고 있습니다.",
+      en: "Next: exploring a locally trained image model (LoRA) on my own skins, with results confined to the mask.",
+    },
     repo: null,
   },
   {
