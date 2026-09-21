@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TechmoUP · Play</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="../../assets/logo.webp">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <style>
+    :root { --bg:#fff; --text:#111; --muted:#6a6a67; --line:#e7e7e3; --soft:#f7f7f5; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family:"Pretendard Variable",Pretendard,-apple-system,"Segoe UI","Malgun Gothic",sans-serif; line-height:1.6; -webkit-font-smoothing:antialiased; word-break:keep-all; }
+    header { display:flex; align-items:center; gap:12px; padding:14px 20px; border-bottom:1px solid var(--line); }
+    header a { color:inherit; text-decoration:none; font-weight:600; }
+    header .title { margin-left:auto; color:var(--muted); font-size:14px; }
+    main { max-width:1180px; margin:0 auto; padding:24px 20px 48px; }
+    .stage { position:relative; width:100%; aspect-ratio:16/9; border-radius:14px; overflow:hidden; background:#0b1230; border:1px solid var(--line); }
+    #unity-canvas { position:absolute; inset:0; width:100%; height:100%; display:block; background:#0b1230; }
+    .overlay { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; text-align:center; padding:24px; color:#fff; background:linear-gradient(rgba(6,10,30,.55),rgba(6,10,30,.72)), var(--poster) center/cover no-repeat; }
+    .overlay[hidden] { display:none; }
+    .overlay h1 { margin:0; font-size:clamp(26px,4vw,44px); letter-spacing:-.02em; }
+    .overlay p { margin:0; max-width:34em; opacity:.92; font-size:15px; }
+    .btn { font:inherit; font-weight:700; border:0; border-radius:999px; padding:13px 28px; background:#fff; color:#111; cursor:pointer; font-size:16px; }
+    .btn:hover { background:#f0f0ee; }
+    .btn[disabled] { opacity:.6; cursor:default; }
+    .bar { width:min(420px,80%); height:8px; border-radius:99px; background:rgba(255,255,255,.25); overflow:hidden; }
+    .bar > i { display:block; height:100%; width:0; background:linear-gradient(90deg,#7cc9e8,#9b86f5,#f08bb4); transition:width .2s; }
+    .row { display:flex; flex-wrap:wrap; gap:10px 24px; align-items:center; margin-top:16px; }
+    .keys { display:flex; flex-wrap:wrap; gap:8px 18px; font-size:14px; color:var(--muted); }
+    .keys b { color:var(--text); background:var(--soft); border:1px solid var(--line); border-radius:6px; padding:1px 8px; margin-right:6px; font-weight:600; font-size:13px; }
+    .ghost { font:inherit; font-size:14px; font-weight:600; margin-left:auto; border:1px solid var(--line); background:#fff; border-radius:999px; padding:7px 16px; cursor:pointer; }
+    .ghost:hover { border-color:var(--text); }
+    .ghost[disabled] { opacity:.45; cursor:default; }
+    .note { margin-top:14px; font-size:12.5px; color:var(--muted); }
+    .mobile { display:none; padding:40px 8px; text-align:center; }
+    body.is-mobile .mobile { display:block; }
+    body.is-mobile .desktop-only { display:none; }
+    @media (max-width:640px) { .ghost { margin-left:0; } }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../../index.html#school" id="back">← 포트폴리오</a>
+    <span class="title">TechmoUP</span>
+  </header>
+
+  <main>
+    <div class="mobile" id="mobile">
+      <h1 id="m-title">PC 브라우저에서 플레이해 주세요</h1>
+      <p id="m-text">마우스 조작과 키보드가 필요한 게임이라 스마트폰에서는 지원하지 않습니다.</p>
+    </div>
+
+    <div class="desktop-only">
+      <div class="stage" id="stage">
+        <canvas id="unity-canvas" tabindex="-1"></canvas>
+        <div class="overlay" id="start" style="--poster:url(../../assets/projects/techmoup-menu.webp)">
+          <h1>TechmoUP</h1>
+          <p id="intro">캠퍼스를 오르는 2D 클라이밍 게임입니다. 처음 한 번은 약 60MB를 내려받습니다.</p>
+          <button class="btn" id="play">플레이 시작</button>
+        </div>
+        <div class="overlay" id="loading" hidden>
+          <h1 id="loading-title">불러오는 중</h1>
+          <div class="bar"><i id="bar"></i></div>
+          <p id="pct">0%</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="keys" id="keys"></div>
+        <button class="ghost" id="fs" disabled>전체 화면</button>
+      </div>
+      <p class="note" id="note"></p>
+    </div>
+  </main>
+
+  <script src="Build/techmoup.loader.js"></script>
+  <script>
+    (function () {
+      var STR = {
+        ko: {
+          back: "← 포트폴리오", intro: "캠퍼스를 오르는 2D 클라이밍 게임입니다. 처음 한 번은 약 60MB를 내려받습니다.",
+          play: "플레이 시작", loading: "불러오는 중", fs: "전체 화면",
+          keys: [["마우스 왼쪽", "누른 채 드래그해 조준하고 놓으면 점프"], ["Space", "슈퍼 점프"], ["Shift", "브레이크"], ["Esc", "일시정지"]],
+          note: "컴퓨터 수업(컴퓨터 그래픽스)에서 만든 Unity 6 게임을 브라우저용으로 빌드했습니다. PC 브라우저를 권장합니다. 한 번 내려받은 뒤에는 브라우저에 저장되어 더 빨리 열립니다. 게임 속 이미지와 음악은 AI로 제작했고, 글꼴은 메이플스토리 서체(NEXON)입니다.",
+          mTitle: "PC 브라우저에서 플레이해 주세요", mText: "마우스 조작과 키보드가 필요한 게임이라 스마트폰에서는 지원하지 않습니다.",
+          error: "게임을 불러오지 못했습니다. 새로고침한 뒤 다시 시도해 주세요."
+        },
+        en: {
+          back: "← Portfolio", intro: "A 2D climbing game set on a campus. The first visit downloads about 60 MB.",
+          play: "Start playing", loading: "Loading", fs: "Fullscreen",
+          keys: [["Left mouse", "hold and drag to aim, release to jump"], ["Space", "super jump"], ["Shift", "brake"], ["Esc", "pause"]],
+          note: "A Unity 6 game from a computer graphics class, built for the browser. A desktop browser is recommended. After the first download it is cached, so it opens faster. The images and music in the game are AI-generated, and the font is the MapleStory typeface (NEXON).",
+          mTitle: "Please play on a desktop browser", mText: "The game needs a mouse and keyboard, so phones are not supported.",
+          error: "The game could not be loaded. Please refresh and try again."
+        }
+      };
+
+      var lang = new URLSearchParams(location.search).get("lang");
+      try { lang = lang || localStorage.getItem("portfolio-lang"); } catch (e) {}
+      if (lang !== "ko" && lang !== "en") lang = (navigator.language || "").toLowerCase().indexOf("ko") === 0 ? "ko" : "en";
+      var t = STR[lang];
+      document.documentElement.lang = lang;
+
+      var $ = function (id) { return document.getElementById(id); };
+      $("back").textContent = t.back; $("intro").textContent = t.intro; $("play").textContent = t.play;
+      $("loading-title").textContent = t.loading; $("fs").textContent = t.fs; $("note").textContent = t.note;
+      $("m-title").textContent = t.mTitle; $("m-text").textContent = t.mText;
+      $("keys").innerHTML = t.keys.map(function (k) { return "<span><b>" + k[0] + "</b>" + k[1] + "</span>"; }).join("");
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) { document.body.classList.add("is-mobile"); return; }
+
+      $("play").addEventListener("click", function () {
+        $("start").hidden = true;
+        $("loading").hidden = false;
+        var canvas = $("unity-canvas");
+        createUnityInstance(canvas, {
+          dataUrl: "Build/techmoup.data.unityweb",
+          frameworkUrl: "Build/techmoup.framework.js.unityweb",
+          codeUrl: "Build/techmoup.wasm.unityweb",
+          streamingAssetsUrl: "StreamingAssets",
+          companyName: "Ultinight",
+          productName: "TechmoUP",
+          productVersion: "1.0"
+        }, function (progress) {
+          var pct = Math.round(progress * 100);
+          $("bar").style.width = pct + "%";
+          $("pct").textContent = pct + "%";
+        }).then(function (instance) {
+          $("loading").hidden = true;
+          canvas.focus();
+          $("fs").disabled = false;
+          $("fs").addEventListener("click", function () { instance.SetFullscreen(1); });
+        }).catch(function (err) {
+          $("loading-title").textContent = t.error;
+          $("pct").textContent = String(err).slice(0, 160);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

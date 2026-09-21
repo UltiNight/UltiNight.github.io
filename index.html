@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ultinight — Portfolio</title>
+  <meta name="description" content="포트폴리오: 테크니컬 아트 & 리버스 엔지니어링 / Portfolio: technical art and reverse engineering.">
+  <meta property="og:title" content="Ultinight — Portfolio">
+  <meta property="og:description" content="Technical art and reverse engineering.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23111'/%3E%3Cpath d='M16 5l2.6 8.4L27 16l-8.4 2.6L16 27l-2.6-8.4L5 16l8.4-2.6z' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="nav.skip">본문으로 건너뛰기</a>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Ultinight"><img class="brand-logo" src="assets/logo.webp" alt="" width="28" height="28"><span>Ultinight</span></a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about" data-i18n="nav.about">소개</a>
+        <a href="#ta" data-i18n="nav.ta">테크니컬 아트</a>
+        <a href="#re" data-i18n="nav.re">리버스 엔지니어링</a>
+        <a href="#auto" data-i18n="nav.auto">웹/자동화</a>
+        <a href="#school" data-i18n="nav.school">전공 프로젝트 일부</a>
+        <a href="#contact" data-i18n="nav.contact">연락</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="ko" aria-pressed="true">KO</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="print-head" id="print-head"><strong>Ultinight</strong> · github.com/Ultinight</div>
+
+  <main id="main">
+    <section class="hero-shell" id="top">
+      <canvas class="hero-gl" id="hero-gl" aria-hidden="true"></canvas>
+      <div class="hero wrap">
+      <p class="eyebrow" data-i18n="hero.eyebrow">Portfolio</p>
+      <h1 data-i18n="hero.title">게임 모딩과 개발 도구를 만듭니다.</h1>
+      <p class="lead" data-i18n="hero.lead"></p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#modding" data-i18n="hero.cta.work">작업물 보기</a>
+        <a class="btn" href="https://github.com/Ultinight" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn" id="resume-link" href="resume-ko.pdf" download data-i18n="hero.cta.resume">이력서 PDF</a>
+      </div>
+      <dl class="facts" id="facts"></dl>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
+
+    <section class="section wrap" id="about">
+      <h2 class="section-title" data-i18n="about.title">소개</h2>
+      <div class="about-grid">
+        <div class="prose" id="about-body"></div>
+        <div>
+          <h3 class="mini-title" data-i18n="about.stack">사용 기술</h3>
+          <ul class="chips" id="stack"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="ta">
+      <h2 class="section-title" data-i18n="ta.title">테크니컬 아트</h2>
+      <p class="section-desc" data-i18n="ta.desc"></p>
+      <p class="notice" data-i18n="disclaimer"></p>
+      <div class="cards" id="list-ta"></div>
+
+      <div class="gallery-block" id="skins">
+        <h3 class="sub-title" data-i18n="skins.title">텍스처 맵핑</h3>
+        <p class="section-desc" data-i18n="skins.desc"></p>
+        <p class="notice" data-i18n="skins.notice"></p>
+        <h4 class="mini-title" data-i18n="skins.krita">Krita 텍스처 작업</h4>
+        <p class="hint work-desc" data-i18n="skins.krita.desc"></p>
+        <div class="gallery work" id="gallery-krita"></div>
+        <h4 class="mini-title" data-i18n="skins.poses">Blender 포즈 작업</h4>
+        <p class="hint work-desc" data-i18n="skins.poses.desc"></p>
+        <div class="gallery work" id="gallery-poses"></div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="re">
+      <h2 class="section-title" data-i18n="re.title">리버스 엔지니어링 · 보안 도구</h2>
+      <p class="section-desc" data-i18n="re.desc"></p>
+      <p class="notice" data-i18n="disclaimer"></p>
+      <div class="cards" id="list-re"></div>
+
+      <h3 class="mini-title lab-title" data-i18n="lab.title">브라우저에서 써 보기</h3>
+      <p class="section-desc lab-desc" data-i18n="lab.desc"></p>
+      <div class="lab" id="lab">
+        <div class="lab-tabs" role="tablist">
+          <button type="button" role="tab" data-tab="number" aria-selected="true" data-i18n="lab.tab.number">진법 변환</button>
+          <button type="button" role="tab" data-tab="float" aria-selected="false" data-i18n="lab.tab.float">IEEE754</button>
+          <button type="button" role="tab" data-tab="text" aria-selected="false" data-i18n="lab.tab.text">텍스트 ↔ Hex/Base64</button>
+        </div>
+
+        <div class="lab-panel" data-panel="number" role="tabpanel">
+          <label class="lab-field"><span data-i18n="lab.input">입력</span>
+            <input id="lab-number" type="text" spellcheck="false" autocomplete="off" value="0xdeadbeef"></label>
+          <p class="hint" data-i18n="lab.number.hint"></p>
+          <dl class="lab-out" id="out-number"></dl>
+        </div>
+
+        <div class="lab-panel" data-panel="float" role="tabpanel" hidden>
+          <label class="lab-field"><span data-i18n="lab.input">입력</span>
+            <input id="lab-float" type="text" spellcheck="false" autocomplete="off" value="3.14"></label>
+          <p class="hint" data-i18n="lab.float.hint"></p>
+          <dl class="lab-out" id="out-float"></dl>
+        </div>
+
+        <div class="lab-panel" data-panel="text" role="tabpanel" hidden>
+          <div class="lab-row">
+            <label class="lab-field grow"><span data-i18n="lab.input">입력</span>
+              <input id="lab-text" type="text" spellcheck="false" autocomplete="off" value="Hello, 안녕"></label>
+            <label class="lab-field"><span data-i18n="lab.from">입력 형식</span>
+              <select id="lab-text-from">
+                <option value="text">Text</option>
+                <option value="hex">Hex</option>
+                <option value="base64">Base64</option>
+              </select></label>
+          </div>
+          <p class="hint" data-i18n="lab.text.hint"></p>
+          <dl class="lab-out" id="out-text"></dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="auto">
+      <h2 class="section-title" data-i18n="auto.title">웹 · 봇 · 자동화</h2>
+      <p class="section-desc" data-i18n="auto.desc"></p>
+      <div class="cards" id="list-auto"></div>
+    </section>
+
+    <section class="section wrap" id="school">
+      <h2 class="section-title" data-i18n="school.title">대학교 수업 프로젝트</h2>
+      <p class="section-desc" data-i18n="school.desc"></p>
+      <div class="cards" id="list-school"></div>
+    </section>
+
+    <section class="section wrap" id="contact">
+      <h2 class="section-title" data-i18n="contact.title">연락</h2>
+      <p class="section-desc" data-i18n="contact.desc"></p>
+      <ul class="links">
+        <li><a href="https://github.com/Ultinight" target="_blank" rel="noopener">GitHub · @Ultinight ↗</a></li>
+        <li><a id="resume-link-2" href="resume-ko.pdf" download data-i18n="hero.cta.resume">이력서 PDF</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span>© <span id="year"></span> Ultinight</span>
+      <span data-i18n="footer.note"></span>
+      <span class="icon-credit" data-i18n="footer.icons"></span>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Work screenshot">
+    <form method="dialog"><button class="lb-close" aria-label="Close">✕</button></form>
+    <div class="lb-figs" id="lb-figs"></div>
+    <p id="lb-cap"></p>
+  </dialog>
+
+  <noscript><p class="wrap" style="padding:24px 0">이 페이지는 JavaScript가 필요합니다. / This page requires JavaScript.</p></noscript>
+
+  <script src="js/content.js"></script>
+  <script src="js/lab.js"></script>
+  <script src="js/hero-gl.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

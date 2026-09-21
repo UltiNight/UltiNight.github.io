@@ -1,0 +1,4 @@
+*.unityweb binary
+*.webp binary
+*.pdf binary
+*.wasm binary
