@@ -213,8 +213,8 @@ const PROJECTS = [
     group: "ta",
     gallery: [
       { src: "assets/projects/hyperphantasia.webp", label: { ko: "사선", en: "3/4" } },
-      { src: "assets/projects/hyperphantasia-front.webp", label: { ko: "앞", en: "Front" } },
-      { src: "assets/projects/hyperphantasia-back.webp", label: { ko: "뒤", en: "Back" } },
+      { src: "assets/projects/hyperphantasia-select.webp", label: { ko: "파츠 선택", en: "Part select" } },
+      { src: "assets/projects/hyperphantasia-paint.webp", label: { ko: "페인트", en: "Paint" } },
     ],
     name: "Hyperphantasia",
     tagline: { ko: "Human: Fall Flat 스킨 제작용 3D 에디터", en: "3D skin editor for Human: Fall Flat" },

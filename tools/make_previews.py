@@ -1,6 +1,7 @@
 """Convert the Hyperphantasia editor captures to web-sized WebP.
 
 The skin work screenshots (assets/skins/krita-full.webp, assets/poses/blender-full.webp)
+and the part-select / paint screens (hyperphantasia-select.webp, hyperphantasia-paint.webp)
 are placed by hand. Original texture files are never copied into this folder.
 """
 from pathlib import Path
@@ -21,5 +22,3 @@ def shot(name, out_name, width=1400):
 
 if __name__ == "__main__":
     shot("hyperphantasia-current-three-quarter.png", "hyperphantasia.webp")
-    shot("hyperphantasia-current-front.png", "hyperphantasia-front.webp")
-    shot("hyperphantasia-current-back.png", "hyperphantasia-back.webp")
