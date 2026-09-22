@@ -232,14 +232,18 @@
   function renderContact() {
     const list = $("#contact-links");
     if (!list) return;
-    const existing = document.getElementById("contact-email-item");
-    if (existing) existing.remove();
-    if (!CONTACT_EMAIL) return;
-    list.prepend(
-      el("li", { id: "contact-email-item" }, [
-        el("a", { href: `mailto:${CONTACT_EMAIL}`, text: `${t("contact.email")} · ${CONTACT_EMAIL}` }),
-      ])
-    );
+    list.querySelectorAll(".contact-dynamic").forEach((node) => node.remove());
+    const items = [
+      CONTACT_EMAIL &&
+        el("li", { class: "contact-dynamic" }, [
+          el("a", { href: `mailto:${CONTACT_EMAIL}`, text: `${t("contact.email")} · ${CONTACT_EMAIL}` }),
+        ]),
+      CONTACT_DISCORD &&
+        el("li", { class: "contact-dynamic" }, [el("span", { text: `${t("contact.discord")} · ${CONTACT_DISCORD}` })]),
+      CONTACT_KAKAO &&
+        el("li", { class: "contact-dynamic" }, [el("span", { text: `${t("contact.kakao")} · ${CONTACT_KAKAO}` })]),
+    ].filter(Boolean);
+    list.append(...items);
   }
 
   function renderMarquee() {
@@ -274,10 +278,6 @@
     });
     document.querySelectorAll(".lang button").forEach((btn) => {
       btn.setAttribute("aria-pressed", String(btn.dataset.lang === lang));
-    });
-    ["resume-link", "resume-link-2"].forEach((id) => {
-      const link = document.getElementById(id);
-      if (link) link.href = `resume-${lang}.pdf`;
     });
     document.title = lang === "ko" ? "Ultinight — 포트폴리오" : "Ultinight — Portfolio";
     const printHead = document.getElementById("print-head");

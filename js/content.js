@@ -16,7 +16,6 @@ const I18N = {
     "hero.lead":
       "게임과 인터랙티브 콘텐츠를 만들면서, 필요한 도구가 없으면 직접 만들어 왔습니다. Unity와 C#을 중심으로 그래픽스, AI, 리버스 엔지니어링까지 관심 영역을 넓혔습니다.",
     "hero.cta.work": "작업물 보기",
-    "hero.cta.resume": "이력서 PDF",
 
     "work.title": "대표 작업",
     "work.desc": "카드를 누르면 바로 이동",
@@ -72,8 +71,10 @@ const I18N = {
       "전공 수업에서 AI, 웹, 그래픽스 분야의 팀/개인 프로젝트 수행본을 일부 소개합니다.",
 
     "contact.title": "연락",
-    "contact.desc": "문의는 GitHub이나 이메일, 또는 discord로 주세요.",
+    "contact.desc": "문의는 GitHub, 이메일, Discord, 카카오톡으로 주세요.",
     "contact.email": "이메일",
+    "contact.discord": "Discord",
+    "contact.kakao": "카카오톡",
     "footer.note": "정적 HTML/CSS/JS로 제작",
     "footer.icons": "기술 아이콘은 Simple Icons(CC0)를 썼고, 각 로고의 상표권은 소유자에게 있습니다.",
 
@@ -109,7 +110,6 @@ const I18N = {
     "hero.lead":
       "I build games and interactive content, and make the tools I need when they don't exist. Starting from Unity and C#, I've grown into graphics, AI, and reverse engineering.",
     "hero.cta.work": "View work",
-    "hero.cta.resume": "Résumé (PDF)",
 
     "work.title": "Selected Work",
     "work.desc": "Start with these three. Each card jumps to the full project card below.",
@@ -165,8 +165,10 @@ const I18N = {
       "Team and individual projects in AI, web and computer graphics from my major courses. For team projects, I note the part I was responsible for.",
 
     "contact.title": "Contact",
-    "contact.desc": "For collaboration or questions, reach out through GitHub. A résumé is available as a PDF.",
+    "contact.desc": "For collaboration or questions, reach out through GitHub, email, Discord or KakaoTalk.",
     "contact.email": "Email",
+    "contact.discord": "Discord",
+    "contact.kakao": "KakaoTalk",
     "footer.note": "Built with plain HTML/CSS/JS",
     "footer.icons": "Technology icons from Simple Icons (CC0). Logos are trademarks of their owners.",
 
@@ -220,8 +222,10 @@ const STACK = [
   { name: "Discord API", color: "#5865F2", icon: "discord" },
 ];
 
-/* Contact section: set an address to show a mailto item; leave empty to hide it. */
-const CONTACT_EMAIL = "";
+/* Contact section: set a value to show that item; leave empty to hide it. */
+const CONTACT_EMAIL = "ultinight@naver.com";
+const CONTACT_DISCORD = "ultinight";
+const CONTACT_KAKAO = "ultinight";
 
 /* Selected Work (homepage highlight): ids into PROJECTS below. Each card links to its full project card. */
 const SELECTED_WORK = ["lunesys", "hyperphantasia", "techmoup"];
