@@ -31,7 +31,7 @@ const I18N = {
 
     "ta.title": "테크니컬 아트",
     "ta.desc":
-      "스킨 텍스처를 그리고, 스킨을 만드는 3D 에디터를 만들고, Blender로 모습을 보기 위해 포즈도 잡아 봤습니다. 셰이더 작업은 색상 파악을 위해 가장 맑은 구성으로 했었습니다.",
+      "스킨 텍스처를 그리고, 스킨을 만드는 3D 에디터를 만들고, Blender로 모습을 보기 위해 포즈도 잡아 봤습니다. Hyperphantasia의 모델 뷰어는 FBX 뷰어처럼, 텍스처 색상을 왜곡 없이 확인할 수 있는 중립적인 조명으로 구성했습니다.",
     "re.title": "리버스 엔지니어링 / 보안 도구",
     "re.desc":
       "게임 엔진과 .NET 애플리케이션의 내부 동작을 이해하기 위해 만든 개인 연구용 도구입니다. Unity Mono와 .NET이 코드를 어떻게 불러오는지 살펴보며 로더, 난독화 도구, 실행 추적 기반 역분석 플랫폼을 만들었습니다.",
@@ -53,12 +53,12 @@ const I18N = {
 
 
     "lab.title": "브라우저에서 써 보기",
-    "lab.desc": "Hypercalculia 봇의 변환 도구를 웹에서 바로 쓰도록 옮겨 본 미니 버전입니다. 입력한 값은 이 브라우저 안에서만 처리됩니다.",
+    "lab.desc": "Hypercalculia 봇의 변환 도구를 웹에서 바로 쓰도록 옮겨 본 미니 버전입니다.",
     "lab.tab.number": "진법 변환",
     "lab.tab.float": "IEEE754",
     "lab.tab.text": "텍스트 ↔ Hex/Base64",
     "lab.input": "입력",
-    "lab.number.hint": "10진수, 0x 16진수, 0b 2진수, 0o 8진수를 넣으세요. 예: 0xdeadbeef",
+    "lab.number.hint": "10진수, 0x 16진수, 0b 2진수, 0o 8진수를 넣으면됩니다. 예: 0xdeadbeef",
     "lab.float.hint": "소수(3.14) 또는 4/8바이트 hex(c3 f5 48 40, 리틀 엔디언)를 넣으세요.",
     "lab.text.hint": "입력 형식을 고르고 값을 넣으면 나머지 표현이 나옵니다.",
     "lab.from": "입력 형식",
@@ -72,7 +72,7 @@ const I18N = {
       "전공 수업에서 AI, 웹, 그래픽스 분야의 팀/개인 프로젝트 수행본을 일부 소개합니다.",
 
     "contact.title": "연락",
-    "contact.desc": "협업이나 문의는 GitHub로 남겨 주세요. 이력서는 PDF로 내려받을 수 있습니다.",
+    "contact.desc": "문의는 GitHub이나 이메일, 또는 discord로 주세요.",
     "contact.email": "이메일",
     "footer.note": "정적 HTML/CSS/JS로 제작",
     "footer.icons": "기술 아이콘은 Simple Icons(CC0)를 썼고, 각 로고의 상표권은 소유자에게 있습니다.",
@@ -124,7 +124,7 @@ const I18N = {
 
     "ta.title": "Technical Art",
     "ta.desc":
-      "I paint skin textures, build a 3D editor for making skins, and pose characters in Blender. My shader work is in the coursework project TechmoUP.",
+      "I paint skin textures, build a 3D editor for making skins, and pose characters in Blender. Hyperphantasia's model viewer uses neutral lighting, like an FBX viewer, so texture colors read without distortion.",
     "re.title": "Reverse Engineering & Security Tools",
     "re.desc":
       "Personal research and development tools built to understand how game engines and .NET applications work under the hood. While studying how Unity Mono and .NET load code, I built a loader, an obfuscator and a trace-based reverse engineering platform.",
