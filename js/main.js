@@ -37,7 +37,7 @@
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const motion = !reduceMotion && "IntersectionObserver" in window;
   const REVEAL_SELECTOR =
-    ".section-title, .sub-title, .section-desc, .notice, .hint, .mini-title, .card, .tile, .lab, .fact, .links li";
+    ".section-title, .sub-title, .section-desc, .notice, .hint, .mini-title, .card, .work-card, .tile, .lab, .fact, .links li";
 
   let revealObserver = null;
   if (motion) {
@@ -138,7 +138,7 @@
     );
 
     const hasMedia = Boolean(project.gallery || project.image);
-    const card = el("article", { class: "card" + (hasMedia ? " has-image" : "") });
+    const card = el("article", { class: "card" + (hasMedia ? " has-image" : ""), id: `project-${project.id}` });
     if (project.shot) {
       card.append(
         el("figure", { class: "card-shot" }, [
@@ -176,6 +176,26 @@
     }
   }
 
+  /* ---------- selected work (reuses PROJECTS by id; clicking jumps to the full card below) ---------- */
+  function renderWork() {
+    const grid = $("#work-grid");
+    if (!grid) return;
+    const cards = SELECTED_WORK.map((id) => {
+      const project = PROJECTS.find((p) => p.id === id);
+      if (!project) return null;
+      const kind = project.group === "school" ? t("label.school") : t("label.personal");
+      return el("a", { class: "work-card", href: `#project-${project.id}` }, [
+        el("div", { class: "work-card-head" }, [
+          el("h3", { class: "work-card-title", text: project.name }),
+          el("span", { class: "work-card-kind", text: kind }),
+        ]),
+        el("p", { class: "work-card-desc", text: project.tagline[lang] }),
+        el("ul", { class: "chips small" }, project.stack.slice(0, 4).map((tag) => el("li", { text: tag }))),
+      ]);
+    }).filter(Boolean);
+    grid.replaceChildren(...cards);
+  }
+
   /* ---------- galleries ---------- */
   const tile = (data, alt) =>
     el(
@@ -205,7 +225,21 @@
   /* ---------- about, facts, marquee ---------- */
   function renderAbout() {
     $("#about-body").replaceChildren(el("p", { text: t("about.p1") }), el("p", { text: t("about.p2") }));
+    $("#stack-core").replaceChildren(...STACK.filter((tool) => tool.core).map((tool) => el("li", { text: tool.name })));
     $("#stack").replaceChildren(...STACK.map((tool) => el("li", { text: tool.name })));
+  }
+
+  function renderContact() {
+    const list = $("#contact-links");
+    if (!list) return;
+    const existing = document.getElementById("contact-email-item");
+    if (existing) existing.remove();
+    if (!CONTACT_EMAIL) return;
+    list.prepend(
+      el("li", { id: "contact-email-item" }, [
+        el("a", { href: `mailto:${CONTACT_EMAIL}`, text: `${t("contact.email")} · ${CONTACT_EMAIL}` }),
+      ])
+    );
   }
 
   function renderMarquee() {
@@ -257,8 +291,10 @@
     renderAbout();
     renderFacts();
     renderProjects();
+    renderWork();
     renderGallery();
     renderMarquee();
+    renderContact();
     refreshLab();
     setupReveal(document, immediate);
   }

@@ -14,12 +14,16 @@ const I18N = {
     "hero.eyebrow": "Portfolio",
     "hero.title": "어떻게 만들었는지 궁금해서, 직접 만들어 봅니다.",
     "hero.lead":
-      "게임을 하다 보면 '이 기능은 어떻게 만들었을까' 궁금해질 때가 많았습니다. 그 답을 직접 찾아보려고 Unity와 C#으로 게임 구조를 뜯어보고, 그 위에 스킨을 그리고 도구를 만들었습니다. 지금은 테크니컬 아티스트나 리버스 엔지니어가 되고 싶습니다.",
+      "게임과 인터랙티브 콘텐츠를 만들면서, 필요한 도구가 없으면 직접 만들어 왔습니다. Unity와 C#을 중심으로 그래픽스, AI, 리버스 엔지니어링까지 관심 영역을 넓혔습니다.",
     "hero.cta.work": "작업물 보기",
     "hero.cta.resume": "이력서 PDF",
 
+    "work.title": "대표 작업",
+    "work.desc": "세 프로젝트로 먼저 살펴보세요. 카드를 누르면 아래 프로젝트 카드로 이동합니다.",
+
     "about.title": "소개",
-    "about.stack": "사용 기술",
+    "about.core": "핵심 기술",
+    "about.stack": "전체 기술",
     "about.p1":
       "저는 김욱동입니다. 완성된 결과물보다, 그것이 어떻게 만들어졌는지가 늘 더 궁금했습니다. 게임을 할 때도 이 기능이 어떤 원리로 돌아가는지, 안쪽은 어떻게 짜여 있는지부터 떠올렸습니다.",
     "about.p2":
@@ -30,7 +34,7 @@ const I18N = {
       "스킨 텍스처를 그리고, 스킨을 만드는 3D 에디터를 만들고, Blender로 포즈도 잡아 봤습니다. 셰이더 작업은 수업 프로젝트 TechmoUP에서 볼 수 있습니다.",
     "re.title": "리버스 엔지니어링 · 보안 도구",
     "re.desc":
-      "Unity Mono와 .NET 게임이 코드를 어떻게 불러오는지 알아보면서 만든 로더, 난독화 도구, 실행 추적 기반 역분석 플랫폼입니다.",
+      "게임 엔진과 .NET 애플리케이션의 내부 동작을 이해하기 위해 만든 개인 연구·개발 도구입니다. Unity Mono와 .NET이 코드를 어떻게 불러오는지 살펴보며 로더, 난독화 도구, 실행 추적 기반 역분석 플랫폼을 만들었습니다.",
     "disclaimer":
       "Human: Fall Flat은 No Brakes Games의 게임이고, 이 사이트와는 관련이 없습니다. 게임 자산, 모드 실행 파일, 소스 코드는 싣지 않았습니다.",
     "auto.title": "웹 · 봇 · 자동화",
@@ -65,10 +69,11 @@ const I18N = {
 
     "school.title": "대학교 수업 프로젝트",
     "school.desc":
-      "대학교 수업에서 진행한 웹, AI, 그래픽스 프로젝트입니다. 팀으로 한 프로젝트에는 제가 맡은 부분을 적어 두었습니다.",
+      "전공 수업에서 AI, 웹, 컴퓨터 그래픽스 분야의 팀·개인 프로젝트를 수행했습니다. 팀 프로젝트에는 담당 범위를 별도로 표기했습니다.",
 
     "contact.title": "연락",
     "contact.desc": "협업이나 문의는 GitHub로 남겨 주세요. 이력서는 PDF로 내려받을 수 있습니다.",
+    "contact.email": "이메일",
     "footer.note": "정적 HTML/CSS/JS로 제작",
     "footer.icons": "기술 아이콘은 Simple Icons(CC0)를 썼고, 각 로고의 상표권은 소유자에게 있습니다.",
 
@@ -81,6 +86,8 @@ const I18N = {
     "label.team": "팀",
     "label.role": "담당",
     "label.highlights": "주요 기능",
+    "label.personal": "개인 프로젝트",
+    "label.school": "대학교 프로젝트",
     "fact.projects": "프로젝트",
     "fact.re": "리버스 엔지니어링 도구",
     "fact.school": "수업 프로젝트",
@@ -100,12 +107,16 @@ const I18N = {
     "hero.eyebrow": "Portfolio",
     "hero.title": "I get curious how things are made, so I build them myself.",
     "hero.lead":
-      "Playing games, I often wonder how a feature was actually made. To find out, I've taken games apart with Unity and C#, painted skins, and built tools. Right now I'm aiming to become a technical artist or a reverse engineer.",
+      "I build games and interactive content, and make the tools I need when they don't exist. Starting from Unity and C#, I've grown into graphics, AI, and reverse engineering.",
     "hero.cta.work": "View work",
     "hero.cta.resume": "Résumé (PDF)",
 
+    "work.title": "Selected Work",
+    "work.desc": "Start with these three. Each card jumps to the full project card below.",
+
     "about.title": "About",
-    "about.stack": "Tech stack",
+    "about.core": "Core skills",
+    "about.stack": "All skills",
     "about.p1":
       "I'm Wookdong Kim. I've always been more curious about how something is made than about the finished result. Even while playing a game, I'd think about how a feature works and how it's put together underneath.",
     "about.p2":
@@ -116,7 +127,7 @@ const I18N = {
       "I paint skin textures, build a 3D editor for making skins, and pose characters in Blender. My shader work is in the coursework project TechmoUP.",
     "re.title": "Reverse Engineering & Security Tools",
     "re.desc":
-      "A loader, an obfuscator and a trace-based analysis platform, all built while working out how Unity Mono and .NET games load code.",
+      "Personal research and development tools built to understand how game engines and .NET applications work under the hood. While studying how Unity Mono and .NET load code, I built a loader, an obfuscator and a trace-based reverse engineering platform.",
     "disclaimer":
       "Human: Fall Flat is a game by No Brakes Games and has nothing to do with this site. Game assets, mod executables and source code are not included.",
     "auto.title": "Web, Bots & Automation",
@@ -151,10 +162,11 @@ const I18N = {
 
     "school.title": "University Coursework",
     "school.desc":
-      "Web, AI and graphics projects from my university classes. For team projects, I note the part I worked on.",
+      "Team and individual projects in AI, web and computer graphics from my major courses. For team projects, I note the part I was responsible for.",
 
     "contact.title": "Contact",
     "contact.desc": "For collaboration or questions, reach out through GitHub. A résumé is available as a PDF.",
+    "contact.email": "Email",
     "footer.note": "Built with plain HTML/CSS/JS",
     "footer.icons": "Technology icons from Simple Icons (CC0). Logos are trademarks of their owners.",
 
@@ -167,6 +179,8 @@ const I18N = {
     "label.team": "Team",
     "label.role": "My part",
     "label.highlights": "Highlights",
+    "label.personal": "Personal project",
+    "label.school": "University project",
     "fact.projects": "Projects",
     "fact.re": "Reverse engineering tools",
     "fact.school": "Coursework projects",
@@ -174,26 +188,29 @@ const I18N = {
   },
 };
 
-/* name, brand colour, optional icon file in assets/icons (Simple Icons, CC0). No icon = coloured chip only. */
+/*
+ * name, brand colour, optional icon file in assets/icons (Simple Icons, CC0). No icon = coloured chip only.
+ * core: true marks the small set shown first in About as "Core skills"; the full list still renders below it.
+ */
 const STACK = [
-  { name: "C#", color: "#9B4F96" },
-  { name: ".NET 8 / Framework 4.8", color: "#512BD4", icon: "dotnet" },
-  { name: "Unity (Mono)", color: "#222222", icon: "unity" },
-  { name: "Blender", color: "#E87D0D", icon: "blender" },
+  { name: "C#", color: "#9B4F96", core: true },
+  { name: ".NET 8 / Framework 4.8", color: "#512BD4", icon: "dotnet", core: true },
+  { name: "Unity (Mono)", color: "#222222", icon: "unity", core: true },
+  { name: "Blender", color: "#E87D0D", icon: "blender", core: true },
   { name: "Krita", color: "#3BABFF", icon: "krita" },
-  { name: "HLSL", color: "#0078D4" },
+  { name: "HLSL", color: "#0078D4", core: true },
   { name: "IDA", color: "#C8102E" },
   { name: "x86-64 Assembly", color: "#5B6B7A" },
   { name: ".NET Reverse Engineering", color: "#7C3AED" },
   { name: "Harmony", color: "#A855F7" },
   { name: "Doorstop", color: "#0EA5E9" },
-  { name: "JavaScript", color: "#F7DF1E", icon: "javascript" },
+  { name: "JavaScript", color: "#F7DF1E", icon: "javascript", core: true },
   { name: "Node.js", color: "#5FA04E", icon: "nodedotjs" },
   { name: "React", color: "#61DAFB", icon: "react" },
   { name: "MongoDB", color: "#47A248", icon: "mongodb" },
   { name: "Electron", color: "#47848F", icon: "electron" },
-  { name: "Three.js", color: "#111111", icon: "threedotjs" },
-  { name: "Python", color: "#3776AB", icon: "python" },
+  { name: "Three.js", color: "#111111", icon: "threedotjs", core: true },
+  { name: "Python", color: "#3776AB", icon: "python", core: true },
   { name: "Streamlit", color: "#FF4B4B", icon: "streamlit" },
   { name: "FastAPI", color: "#009688", icon: "fastapi" },
   { name: "MySQL", color: "#4479A1", icon: "mysql" },
@@ -202,6 +219,12 @@ const STACK = [
   { name: "Chrome Extensions (MV3)", color: "#4285F4", icon: "googlechrome" },
   { name: "Discord API", color: "#5865F2", icon: "discord" },
 ];
+
+/* Contact section: set an address to show a mailto item; leave empty to hide it. */
+const CONTACT_EMAIL = "";
+
+/* Selected Work (homepage highlight): ids into PROJECTS below. Each card links to its full project card. */
+const SELECTED_WORK = ["hyperphantasia", "techmoup", "globalgo"];
 
 /*
  * group: ta | re | auto | school

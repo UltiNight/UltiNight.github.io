@@ -61,10 +61,18 @@
       <div class="about-grid">
         <div class="prose" id="about-body"></div>
         <div>
-          <h3 class="mini-title" data-i18n="about.stack">사용 기술</h3>
-          <ul class="chips" id="stack"></ul>
+          <h3 class="mini-title" data-i18n="about.core">핵심 기술</h3>
+          <ul class="chips" id="stack-core"></ul>
+          <h3 class="mini-title" data-i18n="about.stack">전체 기술</h3>
+          <ul class="chips small" id="stack"></ul>
         </div>
       </div>
+    </section>
+
+    <section class="section wrap" id="work">
+      <h2 class="section-title" data-i18n="work.title">대표 작업</h2>
+      <p class="section-desc" data-i18n="work.desc"></p>
+      <div class="work-grid" id="work-grid"></div>
     </section>
 
     <section class="section wrap" id="ta">
@@ -147,7 +155,7 @@
     <section class="section wrap" id="contact">
       <h2 class="section-title" data-i18n="contact.title">연락</h2>
       <p class="section-desc" data-i18n="contact.desc"></p>
-      <ul class="links">
+      <ul class="links" id="contact-links">
         <li><a href="https://github.com/Ultinight" target="_blank" rel="noopener">GitHub · @Ultinight ↗</a></li>
         <li><a id="resume-link-2" href="resume-ko.pdf" download data-i18n="hero.cta.resume">이력서 PDF</a></li>
       </ul>
