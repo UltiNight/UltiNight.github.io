@@ -224,7 +224,7 @@ const STACK = [
 const CONTACT_EMAIL = "";
 
 /* Selected Work (homepage highlight): ids into PROJECTS below. Each card links to its full project card. */
-const SELECTED_WORK = ["hyperphantasia", "techmoup", "globalgo"];
+const SELECTED_WORK = ["lunesys", "hyperphantasia", "techmoup"];
 
 /*
  * group: ta | re | auto | school
