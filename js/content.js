@@ -41,7 +41,7 @@ const I18N = {
       "스킨 텍스처를 그리고, 스킨을 만드는 3D 에디터를 만들고, Blender로 모습을 보기 위해 포즈도 잡아 봤습니다. Hyperphantasia의 모델 뷰어는 FBX 뷰어처럼, 텍스처 색상을 왜곡 없이 확인할 수 있는 중립적인 조명으로 구성했습니다.",
     "re.title": "리버스 엔지니어링 / 보안 도구",
     "re.desc":
-      "게임 엔진과 .NET 애플리케이션의 내부 동작을 이해하기 위해 만든 개인 연구용 도구입니다. Unity Mono와 .NET이 코드를 어떻게 불러오는지 살펴보며 로더, 난독화 도구, 실행 추적 기반 역분석 플랫폼을 만들었습니다.",
+      "게임 엔진과 .NET 애플리케이션의 내부 동작을 이해하기 위해 만든 개인 연구용 도구입니다. Unity Mono와 .NET이 코드를 어떻게 불러오는지 살펴보며 로더, 난독화 도구, 실행 추적 기반 역분석 도구를 만들었습니다.",
     "disclaimer":
       "Human: Fall Flat은 No Brakes Games사의 게임이며, 본 게임의 자산, 모드 실행 파일, 소스 코드는 본 포트폴리오에 싣지 않았습니다.",
     "auto.title": "웹 / 봇 / 자동화",
@@ -143,7 +143,7 @@ const I18N = {
       "I paint skin textures, build a 3D editor for making skins, and pose characters in Blender. Hyperphantasia's model viewer uses neutral lighting, like an FBX viewer, so texture colors read without distortion.",
     "re.title": "Reverse Engineering & Security Tools",
     "re.desc":
-      "Personal research and development tools built to understand how game engines and .NET applications work under the hood. While studying how Unity Mono and .NET load code, I built a loader, an obfuscator and a trace-based reverse engineering platform.",
+      "Personal research and development tools built to understand how game engines and .NET applications work under the hood. While studying how Unity Mono and .NET load code, I built a loader, an obfuscator and a trace-based reverse engineering tool.",
     "disclaimer":
       "Human: Fall Flat is a game by No Brakes Games and has nothing to do with this site. Game assets, mod executables and source code are not included.",
     "auto.title": "Web, Bots & Automation",
@@ -381,7 +381,7 @@ const PROJECTS = [
       },
     },
     name: "Project Retrograde",
-    tagline: { ko: "실행 추적 기반 역분석 플랫폼", en: "Trace-based reverse engineering platform" },
+    tagline: { ko: "실행 추적 기반 역분석 도구", en: "Trace-based reverse engineering tool" },
     desc: {
       ko: "정적 분석과 실행 추적으로 값과 제어 흐름이 왜 그렇게 되었는지 설명합니다. 값의 출처를 거슬러 올라가고, 두 실행이 처음 갈라지는 지점을 찾습니다.",
       en: "Combines static analysis with execution traces to explain why a value or branch came to be. It traces where a value came from and finds where two runs first diverge.",
