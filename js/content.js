@@ -62,7 +62,7 @@ const I18N = {
     "lab.float.hint": "소수(3.14) 또는 4/8바이트 hex(c3 f5 48 40, 리틀 엔디언)를 넣으세요.",
     "lab.text.hint": "입력 형식을 고르고 값을 넣으면 나머지 표현이 나옵니다.",
     "lab.from": "입력 형식",
-    "lab.invalid": "해석할 수 없는 입력입니다.",
+    "lab.invalid": "해석할 수 없는 입력",
     "lab.bytes": "바이트",
 
 
@@ -242,14 +242,14 @@ const PROJECTS = [
     name: "Hyperphantasia",
     tagline: { ko: "Human: Fall Flat 스킨 제작용 3D 에디터", en: "3D skin editor for Human: Fall Flat" },
     desc: {
-      ko: "인게임 프리셋의 텍스처를 그림판이나 Krita로 고치면 빨갛거나 하얀 물음표 오류가 떠서, 스킨 제작이 불편하고 작업이 늦어졌습니다. 이를 해결하려고 직접 만든 에디터입니다.",
+      ko: "인게임 프리셋의 텍스처를 외부 프로그램으로 수정되면 빨갛거나 하얀 물음표 오류가 떠서, 스킨 제작이 불편하고 작업이 늦어졌습니다. 이를 해결하려고 직접 만든 에디터입니다.",
       en: "Editing an in-game preset's texture in Paint or Krita showed a red or white question mark, which made skin work awkward and slow. I built this editor to fix that.",
     },
     highlights: {
       ko: [
-        "인게임에 넣기 전에 게임과 같은 UV의 실제 모델에서 결과를 먼저 확인합니다",
-        "RGB 마스크로 고른 영역은 칠해지지 않게 보호합니다",
-        "수정한 파츠는 ModelFull.png처럼 게임과 같은 이름의 PNG로 내보냅니다",
+        "인게임에 넣기 전에 게임과 같은 UV의 실제 모델에서 결과를 먼저 확인합니다.",
+        "RGB 마스크로 고른 영역은 칠해지지 않게 보호,",
+        "수정된 파츠는 ModelFull.png와 같이 인게임 자산 이름과 동일하게 PNG로 내보내기 수행.",
       ],
       en: [
         "Check the result on the real model, with the game's own UV, before it goes in game",
@@ -362,7 +362,7 @@ const PROJECTS = [
     name: "StackFlip",
     tagline: { ko: "실패를 격리하는 모듈형 Chromium 확장", en: "A modular Chromium extension that isolates failure" },
     desc: {
-      ko: "Starblast.io용 Manifest V3 확장입니다. 기능마다 모듈을 따로 두어, 게임이 업데이트되어 한 기능이 깨져도 나머지는 계속 동작합니다.",
+      ko: "Starblast.io용 Manifest V3 확장입니다. 기능마다 모듈을 따로 두어, 게임이 업데이트되어 한 기능이 깨지더라도 나머지는 계속 동작합니다.",
       en: "A Manifest V3 extension for Starblast.io. Each feature is its own module, so when a game update breaks one, the rest keep working.",
     },
     highlights: {
@@ -446,7 +446,7 @@ const PROJECTS = [
       ["label.role", { ko: "프론트엔드 (핵심 로직, UI/UX)", en: "Frontend (core logic, UI/UX)" }],
     ],
     desc: {
-      ko: "Allbirds 웹사이트를 공부하려고 클론 코딩한 반응형 쇼핑몰입니다. React, Express, MongoDB로 상품 조회부터 주문, 관리자 기능까지 만들었습니다.",
+      ko: "javascript를 공부하려고 클론 코딩한 반응형 쇼핑몰입니다. React, Express, MongoDB로 상품 조회부터 주문, 관리자 기능까지 만들었습니다.",
       en: "A responsive shop cloned from the Allbirds website for learning. React, Express and MongoDB cover everything from browsing to ordering and admin tools.",
     },
     highlights: {
@@ -518,7 +518,7 @@ const PROJECTS = [
     },
     stack: ["Unity 6", "C#", "URP", "HLSL"],
     note: {
-      ko: "게임 속 이미지와 음악은 AI로 제작했고, 글꼴은 메이플스토리 서체(NEXON)입니다. 화면은 Unity 에디터에서 각 씬을 플레이하며 캡처했습니다.",
+      ko: "게임 속 자산들은 모두 AI로 제작하였으며, 화면은 Unity 에디터에서 각 씬을 플레이하며 캡처했습니다.",
       en: "The images and music in the game are AI-generated, and the font is the MapleStory typeface (NEXON). Screens were captured by playing each scene in the Unity editor.",
     },
     repo: null,
