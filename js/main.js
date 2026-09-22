@@ -68,7 +68,7 @@
   /* ---------- projects ---------- */
   function renderMedia(project) {
     const first = project.gallery[0];
-    const main = el("img", { src: first.src, alt: `${project.name} screenshot`, loading: "lazy" });
+    const main = el("img", { src: first.src, alt: `${project.name} screenshot`, loading: "lazy", width: 1600, height: 900 });
     const buttons = project.gallery.map((view, i) =>
       el("button", { type: "button", class: "view-btn", "aria-pressed": String(i === 0), "data-src": view.src, text: view.label[lang] })
     );
@@ -83,16 +83,43 @@
   }
 
   function renderProject(project) {
+    const kindKey = project.group === "school" ? "label.school" : project.group === "collab" ? "label.collab" : "label.personal";
     const head = el("div", { class: "card-head" }, [
       el("h3", { class: "card-title", text: project.name }),
+      el("span", { class: "badge", text: t(kindKey) }),
       project.status ? el("span", { class: "badge", text: project.status[lang] }) : null,
     ]);
 
     const body = el("div", { class: "card-body" }, [
       head,
       el("p", { class: "card-tagline", text: project.tagline[lang] }),
-      el("p", { class: "card-desc", text: project.desc[lang] }),
     ]);
+
+    if (project.caseStudy) {
+      const cs = project.caseStudy;
+      body.append(
+        el("div", { class: "case-study" }, [
+          el("div", { class: "case-row" }, [
+            el("span", { class: "case-label", text: t("case.problem") }),
+            el("p", { text: cs.problem[lang] }),
+          ]),
+          el("div", { class: "case-row" }, [
+            el("span", { class: "case-label", text: t("case.approach") }),
+            el("p", { text: cs.approach[lang] }),
+          ]),
+          el("div", { class: "case-row" }, [
+            el("span", { class: "case-label", text: t("case.focus") }),
+            el("ul", { class: "card-list" }, cs.focus[lang].map((line) => el("li", { text: line }))),
+          ]),
+          el("div", { class: "case-row" }, [
+            el("span", { class: "case-label", text: t("case.result") }),
+            el("p", { text: cs.result[lang] }),
+          ]),
+        ])
+      );
+    } else if (project.desc) {
+      body.append(el("p", { class: "card-desc", text: project.desc[lang] }));
+    }
 
     if (project.meta) {
       body.append(
@@ -171,7 +198,7 @@
   }
 
   function renderProjects() {
-    for (const group of ["ta", "re", "auto", "school"]) {
+    for (const group of ["ta", "re", "auto", "collab", "school"]) {
       $(`#list-${group}`).replaceChildren(...PROJECTS.filter((p) => p.group === group).map(renderProject));
     }
   }
@@ -280,7 +307,8 @@
     document.querySelectorAll(".lang button").forEach((btn) => {
       btn.setAttribute("aria-pressed", String(btn.dataset.lang === lang));
     });
-    document.title = lang === "ko" ? "Ultinight — 포트폴리오" : "Ultinight — Portfolio";
+    document.title =
+      lang === "ko" ? "김욱동 | 테크니컬 아티스트 / 도구 개발자" : "Wookdong Kim | Technical Artist & Tools Developer";
     const printHead = document.getElementById("print-head");
     if (printHead) printHead.replaceChildren(el("strong", { text: t("site.name") }), ` / github.com/Ultinight`);
   }

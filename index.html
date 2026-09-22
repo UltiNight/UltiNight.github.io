@@ -3,15 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ultinight — Portfolio</title>
-  <meta name="description" content="포트폴리오: 테크니컬 아트 & 리버스 엔지니어링 / Portfolio: technical art and reverse engineering.">
-  <meta property="og:title" content="Ultinight — Portfolio">
-  <meta property="og:description" content="Technical art and reverse engineering.">
+  <title>김욱동 | Technical Artist &amp; Tools Developer</title>
+  <meta name="description" content="김욱동 — 테크니컬 아티스트 / 도구 개발자. Unity, C#, HLSL, Three.js로 그래픽 도구를 만듭니다. / Wookdong Kim — Technical Artist / Tools Developer building graphics tools with Unity, C#, HLSL and Three.js.">
+  <meta property="og:title" content="김욱동 | Technical Artist &amp; Tools Developer">
+  <meta property="og:description" content="Technical Artist / Tools Developer — building graphics tools with Unity, C#, HLSL and Three.js, with reverse engineering as a second track.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ultinight.github.io/">
+  <meta property="og:image" content="https://ultinight.github.io/assets/projects/hyperphantasia.webp">
+  <meta property="og:image:width" content="1400">
+  <meta property="og:image:height" content="812">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23111'/%3E%3Cpath d='M16 5l2.6 8.4L27 16l-8.4 2.6L16 27l-2.6-8.4L5 16l8.4-2.6z' fill='%23fff'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "김욱동",
+    "alternateName": "Ultinight",
+    "url": "https://ultinight.github.io/",
+    "sameAs": ["https://github.com/Ultinight"],
+    "jobTitle": "Technical Artist / Tools Developer",
+    "knowsAbout": ["Unity", "C#", "HLSL", "Three.js", "Blender", ".NET", "Reverse Engineering"]
+  }
+  </script>
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="nav.skip">본문으로 건너뛰기</a>
@@ -42,8 +59,8 @@
     <section class="hero-shell" id="top">
       <canvas class="hero-gl" id="hero-gl" aria-hidden="true"></canvas>
       <div class="hero wrap">
-      <p class="eyebrow" data-i18n="hero.eyebrow">Portfolio</p>
-      <h1 data-i18n="hero.title">게임 모딩과 개발 도구를 만듭니다.</h1>
+      <p class="eyebrow" data-i18n="hero.eyebrow">Technical Artist / Tools Developer</p>
+      <h1 data-i18n="hero.title">그래픽과 코드 사이의 불편을, 직접 만든 도구로 해결합니다.</h1>
       <p class="lead" data-i18n="hero.lead"></p>
       <div class="hero-actions">
         <a class="btn primary" href="#work" data-i18n="hero.cta.work">작업물 보기</a>
@@ -62,7 +79,7 @@
         <div>
           <h3 class="mini-title" data-i18n="about.core">핵심 기술</h3>
           <ul class="chips" id="stack-core"></ul>
-          <h3 class="mini-title" data-i18n="about.stack">전체 기술</h3>
+          <h3 class="mini-title" data-i18n="about.stack">기타 도구</h3>
           <ul class="chips small" id="stack"></ul>
         </div>
       </div>
@@ -143,6 +160,12 @@
       <h2 class="section-title" data-i18n="auto.title">웹 / 봇 / 자동화</h2>
       <p class="section-desc" data-i18n="auto.desc"></p>
       <div class="cards" id="list-auto"></div>
+    </section>
+
+    <section class="section wrap" id="collab">
+      <h2 class="section-title" data-i18n="collab.title">협업 경험</h2>
+      <p class="section-desc" data-i18n="collab.desc"></p>
+      <div class="cards" id="list-collab"></div>
     </section>
 
     <section class="section wrap" id="school">

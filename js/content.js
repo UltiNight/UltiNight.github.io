@@ -11,10 +11,10 @@ const I18N = {
     "nav.school": "수업",
     "nav.contact": "연락",
 
-    "hero.eyebrow": "Portfolio",
-    "hero.title": "어떻게 만들었는지 궁금해서 역분석, 원하는건 직접 제작하고 다녔습니다.",
+    "hero.eyebrow": "테크니컬 아티스트 / 도구 개발자",
+    "hero.title": "그래픽과 코드 사이의 불편을, 직접 만든 도구로 해결합니다.",
     "hero.lead":
-      "게임과 인터랙티브 콘텐츠를 만들면서, 필요한 도구가 없으면 직접 만들어 왔습니다. Unity와 C#을 중심으로 그래픽스, AI, 리버스 엔지니어링까지 관심 영역을 넓혔습니다.",
+      "Unity와 C#을 중심으로 게임과 인터랙티브 콘텐츠를 만들고, 텍스처/셰이더/3D 작업에서 반복되는 문제는 직접 도구를 만들어 해결해 왔습니다. 그 과정에서 그래픽스와 리버스 엔지니어링까지 관심 영역을 넓혔습니다.",
     "hero.cta.work": "작업물 보기",
 
     "work.title": "대표 작업",
@@ -22,11 +22,19 @@ const I18N = {
 
     "about.title": "소개",
     "about.core": "핵심 기술",
-    "about.stack": "전체 기술",
+    "about.stack": "기타 도구",
     "about.p1":
-      "안녕하십니까, \"김욱동\" 이라고합니다. 완성된 결과물보다는, 그것이 어떻게 만들어졌는지가 늘 더 궁금했습니다. 게임을 할 때도 이 기능이 어떤 원리로 돌아가는지, 안쪽은 어떻게 짜여 있는지부터 떠올렸습니다.",
+      "저는 완성된 결과물보다, 그것이 어떻게 만들어졌는지가 늘 더 궁금했습니다. 그 호기심은 게임 모딩에서 시작됐습니다.",
     "about.p2":
-      "그 호기심이 곧 리버스 엔지니어링과 모딩으로 이어졌습니다. 게임을 열어 구조를 파악하고, 그 위에 응용 기능과 도구를 직접 만들어 봤습니다.",
+      "텍스처 작업이 반복적으로 막히는 지점을 직접 도구로 풀어내며 테크니컬 아트로, 게임과 프로그램의 내부 구조를 파고들며 리버스 엔지니어링으로 관심을 넓혀 왔습니다.",
+
+    "case.problem": "문제",
+    "case.approach": "접근",
+    "case.focus": "핵심 기술",
+    "case.result": "결과",
+    "label.collab": "협업 프로젝트",
+    "collab.title": "협업 경험",
+    "collab.desc": "여러 사람이 함께 쓰는 프로젝트에서 에셋과 코드를 반영해 본 경험입니다.",
 
     "ta.title": "테크니컬 아트",
     "ta.desc":
@@ -105,10 +113,10 @@ const I18N = {
     "nav.school": "Coursework",
     "nav.contact": "Contact",
 
-    "hero.eyebrow": "Portfolio",
-    "hero.title": "I get curious how things are made, so I build them myself.",
+    "hero.eyebrow": "Technical Artist / Tools Developer",
+    "hero.title": "I fix friction between graphics and code with tools I build myself.",
     "hero.lead":
-      "I build games and interactive content, and make the tools I need when they don't exist. Starting from Unity and C#, I've grown into graphics, AI, and reverse engineering.",
+      "I build games and interactive content with Unity and C#. When texture, shader or 3D work runs into the same snag twice, I build a tool to fix it — that habit has pulled me deeper into graphics, and from there, into reverse engineering.",
     "hero.cta.work": "View work",
 
     "work.title": "Selected Work",
@@ -116,11 +124,19 @@ const I18N = {
 
     "about.title": "About",
     "about.core": "Core skills",
-    "about.stack": "All skills",
+    "about.stack": "Additional Tools",
     "about.p1":
-      "I'm Wookdong Kim. I've always been more curious about how something is made than about the finished result. Even while playing a game, I'd think about how a feature works and how it's put together underneath.",
+      "I've always been more curious about how something is made than about the finished result. That curiosity started with game modding.",
     "about.p2":
-      "That curiosity led me to Unity and C#. I opened games up, worked out their structure, then built features and tools on top.",
+      "Solving repeated friction in texture work with tools of my own grew into technical art. Digging into how games and programs are built grew into reverse engineering.",
+
+    "case.problem": "Problem",
+    "case.approach": "Approach",
+    "case.focus": "Technical Focus",
+    "case.result": "Result",
+    "label.collab": "Collaboration",
+    "collab.title": "Collaboration Experience",
+    "collab.desc": "Experience contributing assets and code to a project other people also work in.",
 
     "ta.title": "Technical Art",
     "ta.desc":
@@ -199,20 +215,20 @@ const STACK = [
   { name: ".NET 8 / Framework 4.8", color: "#512BD4", icon: "dotnet", core: true },
   { name: "Unity (Mono)", color: "#222222", icon: "unity", core: true },
   { name: "Blender", color: "#E87D0D", icon: "blender", core: true },
-  { name: "Krita", color: "#3BABFF", icon: "krita" },
+  { name: "Krita", color: "#3BABFF", icon: "krita", core: true },
   { name: "HLSL", color: "#0078D4", core: true },
   { name: "IDA", color: "#C8102E" },
   { name: "x86-64 Assembly", color: "#5B6B7A" },
   { name: ".NET Reverse Engineering", color: "#7C3AED" },
   { name: "Harmony", color: "#A855F7" },
   { name: "Doorstop", color: "#0EA5E9" },
-  { name: "JavaScript", color: "#F7DF1E", icon: "javascript", core: true },
+  { name: "JavaScript", color: "#F7DF1E", icon: "javascript" },
   { name: "Node.js", color: "#5FA04E", icon: "nodedotjs" },
   { name: "React", color: "#61DAFB", icon: "react" },
   { name: "MongoDB", color: "#47A248", icon: "mongodb" },
   { name: "Electron", color: "#47848F", icon: "electron" },
   { name: "Three.js", color: "#111111", icon: "threedotjs", core: true },
-  { name: "Python", color: "#3776AB", icon: "python", core: true },
+  { name: "Python", color: "#3776AB", icon: "python" },
   { name: "Streamlit", color: "#FF4B4B", icon: "streamlit" },
   { name: "FastAPI", color: "#009688", icon: "fastapi" },
   { name: "MySQL", color: "#4479A1", icon: "mysql" },
@@ -227,11 +243,12 @@ const CONTACT_EMAIL = "ultinight@naver.com";
 const CONTACT_DISCORD = "ultinight";
 const CONTACT_KAKAO = "ultinight";
 
-/* Selected Work (homepage highlight): ids into PROJECTS below. Each card links to its full project card. */
-const SELECTED_WORK = ["lunesys", "hyperphantasia", "techmoup"];
+/* Selected Work (homepage highlight): ids into PROJECTS below. Each card links to its full project card.
+ * Ordered for a Technical Artist / Tools Developer read: TA work first, reverse engineering last. */
+const SELECTED_WORK = ["hyperphantasia", "techmoup", "dyslexia"];
 
 /* Optional metal accent per Selected Work card: "gold" | "silver" | "bronze". Omit an id for no accent. */
-const WORK_MEDAL = { hyperphantasia: "gold", lunesys: "silver", techmoup: "bronze" };
+const WORK_MEDAL = { hyperphantasia: "gold", techmoup: "silver", dyslexia: "bronze" };
 
 /*
  * group: ta | re | auto | school
@@ -248,21 +265,35 @@ const PROJECTS = [
     ],
     name: "Hyperphantasia",
     tagline: { ko: "Human: Fall Flat 스킨 제작용 3D 에디터", en: "3D skin editor for Human: Fall Flat" },
-    desc: {
-      ko: "인게임 프리셋의 텍스처를 외부 프로그램으로 수정되면 빨갛거나 하얀 물음표 오류가 떠서, 스킨 제작이 불편하고 작업이 늦어졌습니다. 이를 해결하려고 직접 만든 에디터입니다.",
-      en: "Editing an in-game preset's texture in Paint or Krita showed a red or white question mark, which made skin work awkward and slow. I built this editor to fix that.",
-    },
-    highlights: {
-      ko: [
-        "인게임에 넣기 전에 게임과 같은 UV의 실제 모델에서 결과를 먼저 확인합니다.",
-        "RGB 마스크로 고른 영역은 칠해지지 않게 보호,",
-        "수정된 파츠는 ModelFull.png와 같이 인게임 자산 이름과 동일하게 PNG로 내보내기 수행.",
-      ],
-      en: [
-        "Check the result on the real model, with the game's own UV, before it goes in game",
-        "RGB masks protect the areas you choose from being painted over",
-        "Modified parts export as PNGs with the game's own names, such as ModelFull.png",
-      ],
+    caseStudy: {
+      problem: {
+        ko: "인게임 프리셋 텍스처를 그림판이나 Krita 같은 외부 프로그램에서 고치면 빨갛거나 하얀 물음표 오류가 떠서, 스킨 제작이 불편하고 작업이 자주 늦어졌습니다.",
+        en: "Editing an in-game preset's texture in an external tool like Paint or Krita threw a red or white question-mark error, which made skin work awkward and often slowed things down.",
+      },
+      approach: {
+        ko: "게임과 같은 UV의 실제 FBX 모델을 Three.js로 띄워, 텍스처를 고친 즉시 3D 모델에서 결과를 확인할 수 있는 전용 3D 스킨 에디터를 Electron으로 만들었습니다.",
+        en: "I built a dedicated 3D skin editor in Electron that loads the real FBX model with the game's own UV in Three.js, so a texture edit shows up on the model right away.",
+      },
+      focus: {
+        ko: [
+          "Electron 데스크톱 앱 위에 Three.js로 실시간 3D 뷰어 구현",
+          "게임과 동일한 UV의 실제 FBX 모델 로딩",
+          "RGB 마스크로 고른 영역은 칠해지지 않게 보호",
+          "FBX 뷰어 수준의 중립적인 조명으로 색상 왜곡 방지",
+          "수정된 파츠를 ModelFull.png 등 게임 자산 이름 그대로 PNG로 내보내기",
+        ],
+        en: [
+          "Real-time 3D viewer built with Three.js inside an Electron app",
+          "Loads the real FBX model with the game's own UV mapping",
+          "RGB masks protect the areas you choose from being painted over",
+          "Neutral, FBX-viewer-level lighting keeps texture colors from reading wrong",
+          "Exports modified parts as PNGs named exactly like the game's own assets, such as ModelFull.png",
+        ],
+      },
+      result: {
+        ko: "게임에 적용하기 전에 실제 모델에서 텍스처 결과를 바로 확인할 수 있는 제작 워크플로우를 갖추게 되었습니다.",
+        en: "The result is a workflow where I can check how a texture looks on the real model before it ever goes into the game.",
+      },
     },
     stack: ["Electron", "Three.js", "FBX", "Windows"],
     status: { ko: "v0.4.1 개발 중", en: "v0.4.1 in development" },
@@ -516,8 +547,8 @@ const PROJECTS = [
       ["label.role", { ko: "기획부터 구현까지 전체 담당", en: "Sole developer — planning through implementation" }],
     ],
     desc: {
-      ko: "컴퓨터 그래픽스 수업에서 Unity 6(URP)로 만든 2D 클라이밍 게임입니다. 셰이더와 시각 효과로 캠퍼스의 분위기를 표현했습니다.",
-      en: "A 2D climbing game made in Unity 6 (URP) for a computer graphics class, using shaders and visual effects to set the campus mood.",
+      ko: "Unity 6(URP)과 HLSL로 만든, 실제로 플레이할 수 있는 2D 클라이밍 게임입니다. 스프라이트/버퍼 기반 아웃라인 셰이더와 드래그 조준, 부스트 게이지, 라이트 이펙트를 전부 직접 구현했습니다.",
+      en: "A playable 2D climbing game built in Unity 6 (URP) and HLSL. I implemented the sprite and buffer-based outline shaders, drag aiming, a boost gauge, and the lighting effects myself.",
     },
     highlights: {
       ko: ["스프라이트 아웃라인 셰이더와 버퍼 기반 아웃라인 셰이더(HLSL)를 썼습니다", "드래그 조준과 부스트 게이지, 태양광/광선/깃발 이펙트를 넣었습니다"],
@@ -528,6 +559,42 @@ const PROJECTS = [
       ko: "게임 속 자산들은 모두 AI로 제작하였으며, 화면은 Unity 에디터에서 각 씬을 플레이하며 캡처했습니다.",
       en: "The images and music in the game are AI-generated, and the font is the MapleStory typeface (NEXON). Screens were captured by playing each scene in the Unity editor.",
     },
+    repo: null,
+  },
+  {
+    id: "sinfall-collab",
+    group: "collab",
+    name: "SinFall / LCS",
+    tagline: {
+      ko: "팀 Unity 프로젝트 협업 (씬, 머티리얼, 프리팹)",
+      en: "Team Unity project collaboration (scene, materials, prefabs)",
+    },
+    meta: [
+      [
+        "label.role",
+        {
+          ko: "SinFall 씬 갱신, 머티리얼 5개 수정, 프리팹 3개와 .meta 파일 반영, GUID 중복 확인 후 PR 병합",
+          en: "Updated the SinFall scene, revised 5 materials, landed 3 prefabs with their .meta files, checked for GUID collisions, then merged the PR",
+        },
+      ],
+    ],
+    desc: {
+      ko: "여러 명이 함께 쓰는 Unity 프로젝트 SinFall에서, 씬과 에셋을 최신 상태로 맞추는 작업을 맡았습니다.",
+      en: "In SinFall, a shared Unity project, I was responsible for bringing a scene and its assets up to date.",
+    },
+    highlights: {
+      ko: [
+        "SinFall 씬을 최신 상태로 갱신하고 관련 머티리얼 5개를 수정했습니다",
+        "프리팹 3개를 .meta 파일과 함께 반영하고, 프리팹과 메타 매칭/신규 GUID 중복 여부를 확인했습니다",
+        "Git diff와 merge conflict를 검증한 뒤 PR을 병합했습니다",
+      ],
+      en: [
+        "Updated the SinFall scene to its latest state and revised 5 related materials",
+        "Landed 3 prefabs together with their .meta files, then verified prefab-to-meta matching and checked for new GUID collisions",
+        "Reviewed the git diff and merge conflicts, then merged the PR",
+      ],
+    },
+    stack: ["Unity", "Git", "Prefabs", ".meta"],
     repo: null,
   },
 ];
