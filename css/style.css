@@ -109,6 +109,10 @@ h1, h2, h3, p, dl, dd, dt { margin: 0; }
 
 /* Cards */
 .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 36px; }
+
+/* A section with exactly one card: center it at a normal card width instead of leaving empty space beside it */
+.cards:has(> .card:only-child) { grid-template-columns: 1fr; }
+.cards:has(> .card:only-child) > .card:not(.has-image) { max-width: 640px; margin-inline: auto; }
 .card {
   display: flex; flex-direction: column; overflow: hidden;
   border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg);
