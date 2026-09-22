@@ -564,6 +564,14 @@ const PROJECTS = [
   {
     id: "sinfall-collab",
     group: "collab",
+    shot: {
+      src: "assets/projects/sinfall-collab.webp",
+      alt: { ko: "SinFall 프로젝트의 Unity 에디터 작업 화면", en: "The Unity Editor working on the SinFall project" },
+      caption: {
+        ko: "Human: Fall Flat의 공식 레벨을 재해석한 스테이지 작업 화면입니다.",
+        en: "A stage that reinterprets an official Human: Fall Flat level, shown in the Unity Editor.",
+      },
+    },
     name: "SinFall / LCS",
     tagline: {
       ko: "팀 Unity 프로젝트 협업 (씬, 머티리얼, 프리팹)",
