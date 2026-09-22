@@ -505,6 +505,8 @@ const PROJECTS = [
     meta: [
       ["label.course", { ko: "컴퓨터 그래픽스", en: "Computer Graphics" }],
       ["label.period", { ko: "2026.05", en: "May 2026" }],
+      ["label.team", { ko: "개인 (팀 없음)", en: "Solo (no team)" }],
+      ["label.role", { ko: "기획부터 구현까지 전체 담당", en: "Sole developer — planning through implementation" }],
     ],
     desc: {
       ko: "컴퓨터 그래픽스 수업에서 Unity 6(URP)로 만든 2D 클라이밍 게임입니다. 셰이더와 시각 효과로 캠퍼스의 분위기를 표현했습니다.",
