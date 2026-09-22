@@ -3,53 +3,53 @@
 const I18N = {
   ko: {
     "nav.skip": "본문으로 건너뛰기",
-    "site.name": "김욱동 (Ultinight)",
+    "site.name": "김욱동",
     "nav.about": "소개",
     "nav.ta": "테크니컬 아트",
     "nav.re": "리버스 엔지니어링",
-    "nav.auto": "웹·자동화",
+    "nav.auto": "웹/자동화",
     "nav.school": "수업",
     "nav.contact": "연락",
 
     "hero.eyebrow": "Portfolio",
-    "hero.title": "어떻게 만들었는지 궁금해서, 직접 만들어 봅니다.",
+    "hero.title": "어떻게 만들었는지 궁금해서 역분석, 원하는건 직접 제작하고 다녔습니다.",
     "hero.lead":
       "게임과 인터랙티브 콘텐츠를 만들면서, 필요한 도구가 없으면 직접 만들어 왔습니다. Unity와 C#을 중심으로 그래픽스, AI, 리버스 엔지니어링까지 관심 영역을 넓혔습니다.",
     "hero.cta.work": "작업물 보기",
     "hero.cta.resume": "이력서 PDF",
 
     "work.title": "대표 작업",
-    "work.desc": "세 프로젝트로 먼저 살펴보세요. 카드를 누르면 아래 프로젝트 카드로 이동합니다.",
+    "work.desc": "카드를 누르면 바로 이동",
 
     "about.title": "소개",
     "about.core": "핵심 기술",
     "about.stack": "전체 기술",
     "about.p1":
-      "저는 김욱동입니다. 완성된 결과물보다, 그것이 어떻게 만들어졌는지가 늘 더 궁금했습니다. 게임을 할 때도 이 기능이 어떤 원리로 돌아가는지, 안쪽은 어떻게 짜여 있는지부터 떠올렸습니다.",
+      "안녕하십니까, \"김욱동\" 이라고합니다. 완성된 결과물보다는, 그것이 어떻게 만들어졌는지가 늘 더 궁금했습니다. 게임을 할 때도 이 기능이 어떤 원리로 돌아가는지, 안쪽은 어떻게 짜여 있는지부터 떠올렸습니다.",
     "about.p2":
-      "그 호기심이 Unity와 C#으로 이어졌습니다. 게임을 열어 구조를 파악하고, 그 위에 기능과 도구를 직접 만들어 봤습니다.",
+      "그 호기심이 곧 리버스 엔지니어링과 모딩으로 이어졌습니다. 게임을 열어 구조를 파악하고, 그 위에 응용 기능과 도구를 직접 만들어 봤습니다.",
 
     "ta.title": "테크니컬 아트",
     "ta.desc":
-      "스킨 텍스처를 그리고, 스킨을 만드는 3D 에디터를 만들고, Blender로 포즈도 잡아 봤습니다. 셰이더 작업은 수업 프로젝트 TechmoUP에서 볼 수 있습니다.",
-    "re.title": "리버스 엔지니어링 · 보안 도구",
+      "스킨 텍스처를 그리고, 스킨을 만드는 3D 에디터를 만들고, Blender로 모습을 보기 위해 포즈도 잡아 봤습니다. 셰이더 작업은 색상 파악을 위해 가장 맑은 구성으로 했었습니다.",
+    "re.title": "리버스 엔지니어링 / 보안 도구",
     "re.desc":
-      "게임 엔진과 .NET 애플리케이션의 내부 동작을 이해하기 위해 만든 개인 연구·개발 도구입니다. Unity Mono와 .NET이 코드를 어떻게 불러오는지 살펴보며 로더, 난독화 도구, 실행 추적 기반 역분석 플랫폼을 만들었습니다.",
+      "게임 엔진과 .NET 애플리케이션의 내부 동작을 이해하기 위해 만든 개인 연구용 도구입니다. Unity Mono와 .NET이 코드를 어떻게 불러오는지 살펴보며 로더, 난독화 도구, 실행 추적 기반 역분석 플랫폼을 만들었습니다.",
     "disclaimer":
-      "Human: Fall Flat은 No Brakes Games의 게임이고, 이 사이트와는 관련이 없습니다. 게임 자산, 모드 실행 파일, 소스 코드는 싣지 않았습니다.",
-    "auto.title": "웹 · 봇 · 자동화",
+      "Human: Fall Flat은 No Brakes Games사의 게임이며, 본 게임의 자산, 모드 실행 파일, 소스 코드는 본 포트폴리오에 싣지 않았습니다.",
+    "auto.title": "웹 / 봇 / 자동화",
     "auto.desc": "반복 작업과 운영 부담을 덜려고 만든 브라우저 확장, 데스크톱 앱, Discord 봇입니다.",
 
     "skins.title": "스킨 제작 과정",
     "skins.desc":
-      "Human: Fall Flat 커스텀 스킨은 Krita에서 3,072×3,072 UV 텍스처로 직접 그립니다. 다 그린 스킨은 Blender에서 포즈를 잡아 어떻게 보이는지 확인합니다.",
+      "커스텀 스킨은 Krita에서 3,072×3,072 UV 텍스처로 직접 제작했습니다. 완성된 텍스처는 직접 제작한 Hyperphantasia 또는 Blender에서 주로 확인합니다.",
     "skins.notice":
-      "텍스처 원본 파일은 공개하지 않습니다. 여기 실린 이미지는 작업 화면 캡처이고, 스킨 아트워크의 저작권은 Ultinight / L.U.N.E.S.에게 있습니다.",
+      "텍스처 원본 파일은 공개하지 않습니다. 여기 실린 이미지는 작업 화면 캡처이고, 스킨 아트워크의 저작권은 저에게 있습니다.",
     "skins.open": "크게 보기",
     "skins.krita": "Krita 텍스처 작업",
-    "skins.krita.desc": "스킨 텍스처를 레이어로 나눠 그리는 작업 화면입니다. 이미지를 누르면 크게 볼 수 있습니다.",
+    "skins.krita.desc": "스킨 텍스처를 레이어로 나눠 그리는 작업 화면의 일부입니다.",
     "skins.poses": "Blender 포즈 작업",
-    "skins.poses.desc": "스킨을 입힌 캐릭터에 Blender로 포즈를 잡는 작업 화면입니다. 다른 자세에서 스킨이 어떻게 보이는지 확인했습니다.",
+    "skins.poses.desc": "스킨 텍스처를 입힌 캐릭터에 Blender로 포즈를 잡아본 작업 화면입니다. 다른 자세에서 스킨이 어떻게 보일지 확인했습니다.",
 
 
     "lab.title": "브라우저에서 써 보기",
@@ -69,7 +69,7 @@ const I18N = {
 
     "school.title": "대학교 수업 프로젝트",
     "school.desc":
-      "전공 수업에서 AI, 웹, 컴퓨터 그래픽스 분야의 팀·개인 프로젝트를 수행했습니다. 팀 프로젝트에는 담당 범위를 별도로 표기했습니다.",
+      "전공 수업에서 AI, 웹, 그래픽스 분야의 팀/개인 프로젝트 수행본을 일부 소개합니다.",
 
     "contact.title": "연락",
     "contact.desc": "협업이나 문의는 GitHub로 남겨 주세요. 이력서는 PDF로 내려받을 수 있습니다.",
@@ -292,7 +292,7 @@ const PROJECTS = [
       en: "A toolchain of a loading chain where a WinHTTP proxy DLL auto-starts a launcher, an injector and a Discord OAuth installer.",
     },
     highlights: {
-      ko: ["로딩 체인과 설치 과정을 나눠 설치를 단순하게 했습니다", "PowerShell로 빌드·배포 스크립트를 작성했습니다"],
+      ko: ["로딩 체인과 설치 과정을 나눠 설치를 단순하게 했습니다", "PowerShell로 빌드/배포 스크립트를 작성했습니다"],
       en: ["Keeping the loading chain and the install process apart keeps installing simple", "PowerShell build and deploy scripts"],
     },
     stack: ["C#", "Doorstop", "PowerShell", "Discord OAuth"],
@@ -353,7 +353,7 @@ const PROJECTS = [
       en: ["Loads Windows x86-64 PE files with disassembly, CFG and cross-references", "Keeps observed facts, inferences and confirmed knowledge separate"],
     },
     stack: ["Python", "x86-64", "PE"],
-    status: { ko: "MVP 설계·구현 중", en: "MVP in progress" },
+    status: { ko: "MVP 설계/구현 중", en: "MVP in progress" },
     repo: null,
   },
   {
@@ -413,9 +413,9 @@ const PROJECTS = [
       },
     },
     name: "Hypercalculia",
-    tagline: { ko: "저수준·리버싱 도구 Discord 봇", en: "Low-level and reverse-engineering Discord bot" },
+    tagline: { ko: "저수준/리버싱 도구 Discord 봇", en: "Low-level and reverse-engineering Discord bot" },
     desc: {
-      ko: "기계어↔어셈블리 변환, 진법·IEEE754 변환, 해시, JWT 디코드 같은 도구를 슬래시 명령과 접두사 명령으로 제공합니다.",
+      ko: "기계어↔어셈블리 변환, 진법/IEEE754 변환, 해시, JWT 디코드 같은 도구를 슬래시 명령과 접두사 명령으로 제공합니다.",
       en: "Machine code ↔ assembly, base and IEEE754 conversion, hashing and JWT decoding, available as slash and prefix commands.",
     },
     stack: ["Node.js", "discord.js", "Docker"],
@@ -425,7 +425,7 @@ const PROJECTS = [
     id: "lobby-logger",
     group: "auto",
     name: "HFF Lobby Logger",
-    tagline: { ko: "멀티플레이 방 열림·닫힘 기록기", en: "Multiplayer lobby open/close logger" },
+    tagline: { ko: "멀티플레이 방 열림/닫힘 기록기", en: "Multiplayer lobby open/close logger" },
     desc: {
       ko: "Steamworks API로 공개 로비 목록을 조회해, 새로 생긴 방은 열림, 사라진 방은 닫힘으로 Discord 채널에 기록합니다.",
       en: "Polls the public lobby list through the Steamworks API and logs new lobbies as opened and vanished ones as closed to a Discord channel.",
@@ -513,7 +513,7 @@ const PROJECTS = [
       en: "A 2D climbing game made in Unity 6 (URP) for a computer graphics class, using shaders and visual effects to set the campus mood.",
     },
     highlights: {
-      ko: ["스프라이트 아웃라인 셰이더와 버퍼 기반 아웃라인 셰이더(HLSL)를 썼습니다", "드래그 조준과 부스트 게이지, 태양광·광선·깃발 이펙트를 넣었습니다"],
+      ko: ["스프라이트 아웃라인 셰이더와 버퍼 기반 아웃라인 셰이더(HLSL)를 썼습니다", "드래그 조준과 부스트 게이지, 태양광/광선/깃발 이펙트를 넣었습니다"],
       en: ["Sprite outline and buffer-based outline shaders (HLSL)", "Drag aiming with a boost gauge, plus sunlight, light rays and flag effects"],
     },
     stack: ["Unity 6", "C#", "URP", "HLSL"],
