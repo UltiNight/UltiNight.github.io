@@ -236,12 +236,12 @@
     const items = [
       CONTACT_EMAIL &&
         el("li", { class: "contact-dynamic" }, [
-          el("a", { href: `mailto:${CONTACT_EMAIL}`, text: `${t("contact.email")} · ${CONTACT_EMAIL}` }),
+          el("a", { href: `mailto:${CONTACT_EMAIL}`, text: `${t("contact.email")} / ${CONTACT_EMAIL}` }),
         ]),
       CONTACT_DISCORD &&
-        el("li", { class: "contact-dynamic" }, [el("span", { text: `${t("contact.discord")} · ${CONTACT_DISCORD}` })]),
+        el("li", { class: "contact-dynamic" }, [el("span", { text: `${t("contact.discord")} / ${CONTACT_DISCORD}` })]),
       CONTACT_KAKAO &&
-        el("li", { class: "contact-dynamic" }, [el("span", { text: `${t("contact.kakao")} · ${CONTACT_KAKAO}` })]),
+        el("li", { class: "contact-dynamic" }, [el("span", { text: `${t("contact.kakao")} / ${CONTACT_KAKAO}` })]),
     ].filter(Boolean);
     list.append(...items);
   }
@@ -262,7 +262,7 @@
       [PROJECTS.length, t("fact.projects")],
       [PROJECTS.filter((p) => p.group === "re").length, t("fact.re")],
       [PROJECTS.filter((p) => p.group === "school").length, t("fact.school")],
-      ["C# · JS · Python", t("fact.langs")],
+      ["C# / JS / Python", t("fact.langs")],
     ];
     $("#facts").replaceChildren(
       ...facts.map(([value, label]) =>
@@ -281,7 +281,7 @@
     });
     document.title = lang === "ko" ? "Ultinight — 포트폴리오" : "Ultinight — Portfolio";
     const printHead = document.getElementById("print-head");
-    if (printHead) printHead.replaceChildren(el("strong", { text: t("site.name") }), ` · github.com/Ultinight`);
+    if (printHead) printHead.replaceChildren(el("strong", { text: t("site.name") }), ` / github.com/Ultinight`);
   }
 
   let refreshLab = () => {};

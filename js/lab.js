@@ -73,7 +73,7 @@ function initLab(t) {
     const sign = bits >> (total - 1n);
     const exp = (bits >> manBits) & ((1n << expBits) - 1n);
     const man = bits & ((1n << manBits) - 1n);
-    return `sign ${sign} · exp ${exp} (0x${exp.toString(16)}) · mantissa 0x${man.toString(16)}`;
+    return `sign ${sign} / exp ${exp} (0x${exp.toString(16)}) / mantissa 0x${man.toString(16)}`;
   };
   const fromBytes = (bytes) => {
     const dv = new DataView(bytes.buffer, bytes.byteOffset, bytes.length);
