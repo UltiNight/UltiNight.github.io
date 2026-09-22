@@ -184,7 +184,8 @@
       const project = PROJECTS.find((p) => p.id === id);
       if (!project) return null;
       const kind = project.group === "school" ? t("label.school") : t("label.personal");
-      return el("a", { class: "work-card", href: `#project-${project.id}` }, [
+      const medal = WORK_MEDAL[project.id];
+      return el("a", { class: `work-card${medal ? ` work-card--${medal}` : ""}`, href: `#project-${project.id}` }, [
         el("div", { class: "work-card-head" }, [
           el("h3", { class: "work-card-title", text: project.name }),
           el("span", { class: "work-card-kind", text: kind }),

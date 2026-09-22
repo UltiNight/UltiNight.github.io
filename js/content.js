@@ -230,6 +230,9 @@ const CONTACT_KAKAO = "ultinight";
 /* Selected Work (homepage highlight): ids into PROJECTS below. Each card links to its full project card. */
 const SELECTED_WORK = ["lunesys", "hyperphantasia", "techmoup"];
 
+/* Optional metal accent per Selected Work card: "gold" | "silver" | "bronze". Omit an id for no accent. */
+const WORK_MEDAL = { hyperphantasia: "gold", lunesys: "silver", techmoup: "bronze" };
+
 /*
  * group: ta | re | auto | school
  * repo:  set to a public GitHub URL to show a link; leave null while the repo is private.
