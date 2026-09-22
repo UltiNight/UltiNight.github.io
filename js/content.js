@@ -566,41 +566,29 @@ const PROJECTS = [
     group: "collab",
     shot: {
       src: "assets/projects/sinfall-collab.webp",
-      alt: { ko: "SinFall 프로젝트의 Unity 에디터 작업 화면", en: "The Unity Editor working on the SinFall project" },
+      alt: { ko: "SinFall 씬의 Unity 에디터 작업 화면", en: "The Unity Editor working on the SinFall scene" },
       caption: {
         ko: "Human: Fall Flat의 공식 레벨을 재해석한 스테이지 작업 화면입니다.",
         en: "A stage that reinterprets an official Human: Fall Flat level, shown in the Unity Editor.",
       },
     },
-    name: "SinFall / LCS",
+    name: "Level Construct Studio (LCS)",
     tagline: {
-      ko: "팀 Unity 프로젝트 협업 (씬, 머티리얼, 프리팹)",
-      en: "Team Unity project collaboration (scene, materials, prefabs)",
+      ko: "팀 Unity 프로젝트의 SinFall 씬 자산 관리",
+      en: "Asset management for the SinFall scene in a team Unity project",
     },
     meta: [
       [
         "label.role",
         {
-          ko: "SinFall 씬 갱신, 머티리얼 5개 수정, 프리팹 3개와 .meta 파일 반영, GUID 중복 확인 후 PR 병합",
-          en: "Updated the SinFall scene, revised 5 materials, landed 3 prefabs with their .meta files, checked for GUID collisions, then merged the PR",
+          ko: "SinFall 씬 전체 자산 관리",
+          en: "Overall asset management for the SinFall scene",
         },
       ],
     ],
     desc: {
-      ko: "여러 명이 함께 쓰는 Unity 프로젝트 SinFall에서, 씬과 에셋을 최신 상태로 맞추는 작업을 맡았습니다.",
-      en: "In SinFall, a shared Unity project, I was responsible for bringing a scene and its assets up to date.",
-    },
-    highlights: {
-      ko: [
-        "SinFall 씬을 최신 상태로 갱신하고 관련 머티리얼 5개를 수정했습니다",
-        "프리팹 3개를 .meta 파일과 함께 반영하고, 프리팹과 메타 매칭/신규 GUID 중복 여부를 확인했습니다",
-        "Git diff와 merge conflict를 검증한 뒤 PR을 병합했습니다",
-      ],
-      en: [
-        "Updated the SinFall scene to its latest state and revised 5 related materials",
-        "Landed 3 prefabs together with their .meta files, then verified prefab-to-meta matching and checked for new GUID collisions",
-        "Reviewed the git diff and merge conflicts, then merged the PR",
-      ],
+      ko: "여러 명이 함께 쓰는 Unity 프로젝트 Level Construct Studio(LCS)에서, 제가 맡은 SinFall 씬의 자산을 전체적으로 관리했습니다. 다른 씬은 다른 팀원이 맡았습니다.",
+      en: "In Level Construct Studio (LCS), a shared Unity project, I handled overall asset management for the SinFall scene. Other scenes were handled by other teammates.",
     },
     stack: ["Unity", "Git", "Prefabs", ".meta"],
     repo: null,
